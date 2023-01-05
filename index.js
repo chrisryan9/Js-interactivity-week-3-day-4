@@ -34,6 +34,10 @@ const deleteMovie = (event) => {
     revealMessage();
 
     event.target.parentNode.remove();
+
+    setTimeout(() => {  // Add a delay before resetting the textContent property
+        message.textContent = "";
+    }, 2000);
 };
 
 const crossOffMovie = (event) => {
@@ -46,12 +50,15 @@ const crossOffMovie = (event) => {
     }
 
     revealMessage();
+
+    setTimeout(() => {  // Add a delay before resetting the textContent property
+        message.textContent = "";
+    }, 2000);
 };
 
 
 const revealMessage = () => {
 
     setTimeout(() => {
-        message.classList.add('hide')
-    }, 2000);
+    }, 5200)
 }
